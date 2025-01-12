@@ -1,0 +1,9 @@
+- Biên dịch 
+- Thông dịch 
+- Lập trình thủ tục
+- Lập trình hướng đối tượng
+- lập trình hàm 
+- Lập trình logic
+- Dữ liệu 
+- Điều khiển 
+- Chú thích
