@@ -16,7 +16,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREE
 pygame.display.set_caption("Chạm vào thần tượng")
 
 # Load ảnh thần tượng
-idol_image = pygame.image.load("E:\GÓC TÂM LINH\idol-image.jpg")  # Thay bằng đường dẫn ảnh của bạn
+idol_image = pygame.image.load("idol-image.jpg")  # Thay bằng đường dẫn ảnh của bạn
 idol_image = pygame.transform.scale(idol_image, (377, 500))  # Thay đổi kích thước ảnh (nếu cần)
 idol_rect = idol_image.get_rect()
 
