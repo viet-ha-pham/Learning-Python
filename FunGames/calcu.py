@@ -17,8 +17,8 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
 # Phông chữ
-font = pygame.font.Font(None, 74)
-small_font = pygame.font.Font(None, 36)
+font = pygame.font.Font("fonts/Roboto-VariableFont_wdth,wght.ttf", 72)
+small_font = pygame.font.Font("fonts/Roboto-VariableFont_wdth,wght.ttf", 36)
 
 # Hàm tạo phép tính ngẫu nhiên
 def generate_question():
@@ -81,13 +81,13 @@ def main():
         # Tính thời gian còn lại
         elapsed_time = time.time() - start_time
         remaining_time = max(0, 5 - elapsed_time)
-        display_text(f"Thời gian: {int(remaining_time)} giây", 550, 50, RED, "small")
+        display_text(f"Thời gian: {int(remaining_time)} giây", 50, 50, RED, "small")
 
         # Kiểm tra thời gian hết hạn
         if remaining_time <= 0:
             display_text("Hết giờ! Nhấn Esc để thoát.", 150, 200, RED, "small")
             pygame.display.flip()
-            time.sleep(2)
+            time.sleep(5)
             running = False
 
         pygame.display.flip()
