@@ -74,7 +74,7 @@ while running:
 
     # Kiểm tra va chạm giữa người chơi và thần tượng
     if check_collision(player, idol_pos, idol_radius):
-        print("Bạn đã bao vây thần tượng thành công!")
+        print("Bạn đã đến đích thành công!")
         running = False
 
     # Kiểm tra va chạm với đối thủ
