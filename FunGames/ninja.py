@@ -7,7 +7,7 @@ pygame.init()
 # Kích thước màn hình
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Bao Vây Thần Tượng')
+pygame.display.set_caption('Tiếp Cận Thần Tượng')
 
 # Màu sắc
 WHITE = (255, 255, 255)
