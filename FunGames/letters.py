@@ -67,6 +67,7 @@ while running:
             letter["dy"] *= -1
 
     # Kiểm tra va chạm giữa các chữ cái
+    to_remove = set()  # Tập hợp để lưu các chỉ số cần xóa
     for i in range(len(letters) - 1, -1, -1):
         for j in range(i - 1, -1, -1):
             if is_collision(letters[i], letters[j]):
@@ -75,9 +76,12 @@ while running:
                 # Kiểm tra điều kiện phụ âm + nguyên âm
                 if (char1 in CONSONANTS and char2 in VOWELS) or (char2 in CONSONANTS and char1 in VOWELS):
                     static_pairs.append(char1 + char2)
-                    letters.pop(i)
-                    letters.pop(j)
+                    to_remove.add(i)
+                    to_remove.add(j)
                     break
+
+    # Xóa các chữ cái đã va chạm
+    letters = [letters[k] for k in range(len(letters)) if k not in to_remove]
 
     # Vẽ các chữ cái bay
     for letter in letters:
