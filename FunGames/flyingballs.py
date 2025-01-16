@@ -7,7 +7,7 @@ pygame.init()
 # Thiết lập kích thước màn hình và màu sắc
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Bóng bay qua bay lại")
+pygame.display.set_caption("Flying balls")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -15,7 +15,7 @@ COLORS = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)]
 
 # Tốc độ khởi đầu
 SPEED_RANGE = [-5, -4, -3, 3, 4, 5]
-MAX_BALLS = 20
+MAX_BALLS = 100
 BALL_RADIUS = 10
 
 # Lớp đại diện cho quả bóng
@@ -87,7 +87,7 @@ running = True
 game_over = False
 clock = pygame.time.Clock()
 
-font = pygame.font.SysFont(None, 36)
+font = pygame.font.Font("fonts/Roboto-VariableFont_wdth,wght.ttf", 36)
 
 while running:
     screen.fill(WHITE)
