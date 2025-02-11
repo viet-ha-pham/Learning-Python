@@ -1,0 +1,63 @@
+@prefix : <http://example.org/writing-ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# Ontology Definition
+:WritingOntology rdf:type owl:Ontology ;
+    rdfs:label "Ontology for Writing Styles, Genres, and Sentiments" ;
+    rdfs:comment "An ontology to classify writing styles, genres, tones, and sentiments with descriptions." .
+
+# Classes
+:WritingStyle rdf:type rdfs:Class ; rdfs:label "Writing Style" ; rdfs:comment "Defines different writing styles." .
+:Genre rdf:type rdfs:Class ; rdfs:label "Genre" ; rdfs:comment "Defines different genres of writing." .
+:Tone rdf:type rdfs:Class ; rdfs:label "Tone" ; rdfs:comment "Defines different tones of writing." .
+:Sentiment rdf:type rdfs:Class ; rdfs:label "Sentiment" ; rdfs:comment "Defines different emotional sentiments in writing." .
+
+# Writing Styles
+:Formality rdf:type rdfs:Class ; rdfs:subClassOf :WritingStyle ; rdfs:label "Formality" ; rdfs:comment "Defines levels of formality in writing." .
+:ExpressionStyle rdf:type rdfs:Class ; rdfs:subClassOf :WritingStyle ; rdfs:label "Expression Style" ; rdfs:comment "Defines different ways of expressing content." .
+:Perspective rdf:type rdfs:Class ; rdfs:subClassOf :WritingStyle ; rdfs:label "Perspective" ; rdfs:comment "Defines different perspectives in writing." .
+
+# Formality Levels
+:Formal rdf:type :Formality ; rdfs:label "Formal" ; rdfs:comment "Highly structured and professional tone." .
+:SemiFormal rdf:type :Formality ; rdfs:label "Semi-formal" ; rdfs:comment "A balance between formal and casual tone." .
+:Informal rdf:type :Formality ; rdfs:label "Informal" ; rdfs:comment "Casual and conversational tone." .
+
+# Expression Styles
+:Concise rdf:type :ExpressionStyle ; rdfs:label "Concise" ; rdfs:comment "Short and to-the-point writing style." .
+:Expressive rdf:type :ExpressionStyle ; rdfs:label "Expressive" ; rdfs:comment "Rich in emotions and literary devices." .
+:Academic rdf:type :ExpressionStyle ; rdfs:label "Academic" ; rdfs:comment "Objective, precise, and structured writing style." .
+:Technical rdf:type :ExpressionStyle ; rdfs:label "Technical" ; rdfs:comment "Detailed, instructional, and domain-specific writing." .
+:Literary rdf:type :ExpressionStyle ; rdfs:label "Literary" ; rdfs:comment "Artistic and creative writing style." .
+:Persuasive rdf:type :ExpressionStyle ; rdfs:label "Persuasive" ; rdfs:comment "Designed to convince and influence readers." .
+:Narrative rdf:type :ExpressionStyle ; rdfs:label "Narrative" ; rdfs:comment "Story-driven and sequential writing style." .
+
+# Perspectives
+:Subjective rdf:type :Perspective ; rdfs:label "Subjective" ; rdfs:comment "Based on personal opinions and emotions." .
+:Objective rdf:type :Perspective ; rdfs:label "Objective" ; rdfs:comment "Based on facts and evidence without personal bias." .
+:Narrative rdf:type :Perspective ; rdfs:label "Narrative" ; rdfs:comment "Storytelling approach to writing." .
+:Dialogic rdf:type :Perspective ; rdfs:label "Dialogic" ; rdfs:comment "Engaging in conversation or debate." .
+:Reflective rdf:type :Perspective ; rdfs:label "Reflective" ; rdfs:comment "Personal introspection and analysis." .
+
+# Genres
+:NonFiction rdf:type :Genre ; rdfs:label "Non-fiction" ; rdfs:comment "Writing based on factual information." .
+:Fiction rdf:type :Genre ; rdfs:label "Fiction" ; rdfs:comment "Imaginative or invented stories." .
+:AppliedWriting rdf:type :Genre ; rdfs:label "Applied Writing" ; rdfs:comment "Practical and purpose-driven writing." .
+
+# Sentiments
+:Positive rdf:type :Sentiment ; rdfs:label "Positive" ; rdfs:comment "Optimistic and uplifting sentiment." .
+:Negative rdf:type :Sentiment ; rdfs:label "Negative" ; rdfs:comment "Pessimistic and discouraging sentiment." .
+:Neutral rdf:type :Sentiment ; rdfs:label "Neutral" ; rdfs:comment "Balanced and unbiased sentiment." .
+:Excited rdf:type :Sentiment ; rdfs:label "Excited" ; rdfs:comment "Energetic and enthusiastic sentiment." .
+:Melancholic rdf:type :Sentiment ; rdfs:label "Melancholic" ; rdfs:comment "Somber and nostalgic sentiment." .
+:Hopeful rdf:type :Sentiment ; rdfs:label "Hopeful" ; rdfs:comment "Encouraging and filled with expectation." .
+:Angry rdf:type :Sentiment ; rdfs:label "Angry" ; rdfs:comment "Frustrated or aggressive sentiment." .
+:Humorous rdf:type :Sentiment ; rdfs:label "Humorous" ; rdfs:comment "Playful and entertaining sentiment." .
+
+# Tones
+:Neutral rdf:type :Tone ; rdfs:label "Neutral" ; rdfs:comment "Balanced and unbiased tone." .
+:Humorous rdf:type :Tone ; rdfs:label "Humorous" ; rdfs:comment "Playful and entertaining tone." .
+:Inspirational rdf:type :Tone ; rdfs:label "Inspirational" ; rdfs:comment "Motivating and uplifting tone." .
+:Serious rdf:type :Tone ; rdfs:label "Serious" ; rdfs:comment "Formal and weighty tone." .
+:Critical rdf:type :Tone ; rdfs:label "Critical" ; rdfs:comment "Analytical and evaluative tone." .
